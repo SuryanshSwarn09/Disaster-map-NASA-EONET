@@ -74,3 +74,5 @@ export default function FilterControls({ filters, setFilters, categories = [] })
     </div>
   );
 }
+
+// day 02 change in the sidebar ui and favicon
