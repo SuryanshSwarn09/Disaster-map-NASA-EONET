@@ -1,5 +1,7 @@
 # DISASTER MAP
 *A NASA EONET v3 Interactive Mapping Console driven by a pure aerospace styling matrix.*
+
+
 **[Project:02]**
 _April 2026_
 
@@ -25,6 +27,10 @@ _React, Vite, Twailwindcss, EONET API, JS, Leaflet_
 * **Updates:**
     * UI redo - redesign side bar to remove scrolling resistance and shrink the size of sidebar for better viewing.
 
+**Date: April 19, 2026**
+* **Focus:** Map customization
+* **Updates:**
+    * Map pins - upgrade leaflet pins to custom map icons (using emoji according to the context) for better view and distinguish between different disasters.
 
 
 ---

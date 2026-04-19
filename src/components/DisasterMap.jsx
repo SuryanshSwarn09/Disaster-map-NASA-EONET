@@ -15,8 +15,8 @@ export const getIcon = (categoryId) => {
   let emoji = '📍';
   if (categoryId === 'wildfires') emoji = '🔥';
   if (categoryId === 'volcanoes') emoji = '🌋';
-  if (categoryId === 'severeStorms') emoji = '🌀';
-  if (categoryId === 'earthquakes') emoji = '💢';
+  if (categoryId === 'severeStorms') emoji = '⛈️';
+  if (categoryId === 'earthquakes') emoji = '🌏🫨';
 
   return L.divIcon({
     className: 'custom-ghost-icon',
