@@ -90,17 +90,17 @@ function App() {
       )}
       
       {error && (
-        <div className="absolute top-10 right-10 z-[2000] bg-[rgba(240,240,250,0.1)] border border-[rgba(240,240,250,0.35)] p-6 backdrop-blur-sm">
+        <div className="absolute top-10 right-10 z-[2000] bg-[rgba(240,240,250,0.1)] border border-[rgba(50, 50, 55, 0.35)] p-6 backdrop-blur-sm">
           <h3 className="font-bold text-[13px] tracking-[1.17px]">MISSION ERROR</h3>
           <p className="text-[12px] mt-2 opacity-80">{error}</p>
         </div>
       )}
 
-      {/* Empty State Notification HUD */}
+      {/* Logic to show an alert whenever the PI feeds an empty arraty or no disaster in the selected cordinates on the map */}
       {!isLoading && !error && events.length === 0 && (
-        <div className="absolute top-10 right-10 z-[2000] bg-[rgba(240,240,250,0.1)] border border-[rgba(240,240,250,0.35)] px-8 py-5 backdrop-blur-md pointer-events-none text-right shadow-2xl">
+        <div className="absolute top-10 right-10 z-[2000] bg-[rgba(37, 37, 42, 0.1)] border border-[rgba(240,240,250,0.35)] px-8 py-5 backdrop-blur-md pointer-events-none text-right shadow-2xl">
           <h3 className="font-bold text-[13px] tracking-[1.17px] text-[#f0f0fa]">NO TARGETS ACQUIRED</h3>
-          <p className="text-[11px] mt-2 opacity-70 tracking-[1px] text-[#f0f0fa]">NO ACTIVE EVENTS FOUND FOR THIS CRITERIA</p>
+          <p className="text-[11px] mt-2 opacity-70 tracking-[1px] text-[#f0f0fa]">NO ACTIVE EVENTS FOUND FOR THIS CRITERIA ON SLECTED COORDINATES</p>
         </div>
       )}
     </div>

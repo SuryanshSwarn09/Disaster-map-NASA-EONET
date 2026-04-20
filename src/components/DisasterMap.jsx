@@ -56,6 +56,7 @@ export default function DisasterMap({ events, filters, isSatellite }) {
         <ZoomControl position="bottomright" />
         
         <MarkerClusterGroup
+          key={`${filters.year}-${filters.categories.join('-')}`}
           chunkedLoading
           showCoverageOnHover={false}
           maxClusterRadius={40}

@@ -32,6 +32,12 @@ _React, Vite, Twailwindcss, EONET API, JS, Leaflet_
 * **Updates:**
     * Map pins - upgrade leaflet pins to custom map icons (using emoji according to the context) for better view and distinguish between different disasters.
 
+**Date: April 20, 2026**
+* **Focus:** Map customization
+* **Updates:**
+    * Zero state feedback - Introduced alert layout to show a message "NO TARGET AQUIRED" when there are no disasters in the selected coordinates on the map. 
+    * Inserted conditional DOM logic if the API feeds a empty array.
+
 
 ---
 
