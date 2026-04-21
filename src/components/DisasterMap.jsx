@@ -17,6 +17,10 @@ export const getIcon = (categoryId) => {
   if (categoryId === 'volcanoes') emoji = '🌋';
   if (categoryId === 'severeStorms') emoji = '⛈️';
   if (categoryId === 'earthquakes') emoji = '🌏🫨';
+  if (categoryId === 'floods') emoji = '🌊';
+  if (categoryId === 'Landslides') emoji = '⛰️';
+  if (categoryId === 'Ice') emoji = '🥶';
+  if (categoryId === 'Sea') emoji = '🪸';
 
   return L.divIcon({
     className: 'custom-ghost-icon',
@@ -29,22 +33,22 @@ export const getIcon = (categoryId) => {
 
 export default function DisasterMap({ events, filters, isSatellite }) {
   const center = [22.5937, 78.9629]; // India
-  
-  const tileUrl = isSatellite 
+
+  const tileUrl = isSatellite
     ? "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
     : "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"; // Fallback to Space Black (Carto Dark)
-  
+
   const tileAttribution = isSatellite
     ? 'Imagery &copy; Esri'
     : '&copy; CartoDB';
 
   return (
     <div className="w-full h-full relative z-0 bg-black">
-      <MapContainer 
-        center={center} 
-        zoom={5} 
+      <MapContainer
+        center={center}
+        zoom={5}
         minZoom={3}
-        scrollWheelZoom={true} 
+        scrollWheelZoom={true}
         className="w-full h-full"
         zoomControl={false}
       >
@@ -54,7 +58,7 @@ export default function DisasterMap({ events, filters, isSatellite }) {
           noWrap={true}
         />
         <ZoomControl position="bottomright" />
-        
+
         <MarkerClusterGroup
           key={`${filters.year}-${filters.categories.join('-')}`}
           chunkedLoading
@@ -64,18 +68,18 @@ export default function DisasterMap({ events, filters, isSatellite }) {
         >
           {events.map((ev) => {
             if (!ev.geometry || !ev.geometry.coordinates) return null;
-            
+
             let coord;
             // Handle Polygon / MultiPolygon arrays effectively
             if (ev.geometry.type === 'Polygon' || ev.geometry.type === 'MultiPolygon') {
-              const poly = Array.isArray(ev.geometry.coordinates[0][0]) 
-                ? ev.geometry.coordinates[0][0] 
+              const poly = Array.isArray(ev.geometry.coordinates[0][0])
+                ? ev.geometry.coordinates[0][0]
                 : ev.geometry.coordinates[0];
               coord = [poly[1], poly[0]]; // Extract [lat, lng] from the primary polygon
             } else {
               coord = [ev.geometry.coordinates[1], ev.geometry.coordinates[0]];
             }
-            
+
             // Failsafe to protect React from crashing on unmapped projections
             if (!coord || isNaN(coord[0]) || isNaN(coord[1])) return null;
 
@@ -84,7 +88,7 @@ export default function DisasterMap({ events, filters, isSatellite }) {
             const eventDate = ev.properties?.date || 'SYS_CURRENT';
             const catTitle = ev.properties?.categories?.[0]?.title || 'UNCLASSIFIED';
             const catId = ev.properties?.categories?.[0]?.id || 'wildfires';
-            
+
             return (
               <Marker key={ev.properties?.id || Math.random()} position={coord} icon={getIcon(catId)}>
                 <Popup>
@@ -95,7 +99,7 @@ export default function DisasterMap({ events, filters, isSatellite }) {
                       <p><span className="opacity-50 mr-2">TIMESTAMP:</span> {eventDate}</p>
                       {sources.length > 0 && (
                         <p className="flex items-center">
-                          <span className="opacity-50 mr-2">SYS_LINK:</span> 
+                          <span className="opacity-50 mr-2">SYS_LINK:</span>
                           <a href={sources[0].url} target="_blank" rel="noreferrer" className="text-white hover:text-[rgba(240,240,250,0.5)] transition-colors">
                             [{sources[0].id}]
                           </a>

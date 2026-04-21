@@ -38,6 +38,12 @@ _React, Vite, Twailwindcss, EONET API, JS, Leaflet_
     * Zero state feedback - Introduced alert layout to show a message "NO TARGET AQUIRED" when there are no disasters in the selected coordinates on the map. 
     * Inserted conditional DOM logic if the API feeds a empty array.
 
+**Date: April 21, 2026**
+* **Focus:** Sidebar tweaks
+* **Updates:**
+    * Sidebar optimized for smaller screens, also added responsive classes like max-w-[100vw] so that when it runs on mobile screens, the sidebar handles widths properly relative to the viewport.
+    * Zero state feedback alert repositioned to top-right corner for better visibility.
+    * Added creator button.
 
 ---
 
