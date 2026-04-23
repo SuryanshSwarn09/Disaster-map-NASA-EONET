@@ -31,8 +31,10 @@ export const getIcon = (categoryId) => {
   });
 };
 
+
+// starts on indian subcontinent
 export default function DisasterMap({ events, filters, isSatellite }) {
-  const center = [22.5937, 78.9629]; // India
+  const center = [22.5937, 78.9629];
 
   const tileUrl = isSatellite
     ? "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"

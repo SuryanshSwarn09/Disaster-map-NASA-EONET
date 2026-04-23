@@ -45,6 +45,11 @@ _React, Vite, Twailwindcss, EONET API, JS, Leaflet_
     * Zero state feedback alert repositioned to top-right corner for better visibility.
     * Added creator button.
 
+**Date: April 23, 2026**
+* **Focus:** map optimizations
+* **Updates:** 
+    * Installs react-leaflet-cluster - Now leaflet doesn't lag rendering thousands of pins, seamlessly condense grouped natural disaster into singular numbering pins.
+    * Visual - starts on indian subcontinent then user can navigate other places in the map.
 ---
 
 * **Disaster Map**: Engineered and documented a fully functional web application in **[React]** over a one-month sprint, maintaining a detailed daily changelog.
