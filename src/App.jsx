@@ -119,11 +119,11 @@ function App() {
           <img
             src="pfp.png"
             alt="github"
-            className="w-8 h-8 opacity-100 group-hover:opacity-100 transition-opacity"
+            className="w-10 h-10 opacity-100 group-hover:opacity-100 transition-opacity"
           />
 
           {/* Tooltip / Label */}
-          <div className="absolute bottom-16 px-4 py-2 bg-[rgba(37,37,42,0.95)] border border-[rgba(240,240,250,0.2)] rounded-[4px] backdrop-blur-md opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
+          <div className="absolute bottom-16 px-4 py-2 bg-[rgba(37,37,42,0.95)] border border-[rgba(37,37,42,0.95)] rounded-[4px] backdrop-blur-md opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
             <p className="text-[11px] font-bold tracking-[1.17px] text-[#f0f0fa] m-0">CODED BY SURYANSH</p>
           </div>
         </a>
