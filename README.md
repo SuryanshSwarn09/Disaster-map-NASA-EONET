@@ -50,6 +50,12 @@ _React, Vite, Twailwindcss, EONET API, JS, Leaflet_
 * **Updates:** 
     * Installs react-leaflet-cluster - Now leaflet doesn't lag rendering thousands of pins, seamlessly condense grouped natural disaster into singular numbering pins.
     * Visual - starts on indian subcontinent then user can navigate other places in the map.
+
+**Date: May 10, 2026**
+* **Focus:** UI, logo and PWA
+* **Updates:** 
+    * designed new logo with IconKitchen
+    * Progressive Web App (PWA):Look at the far right side of the URL address bar. You should now see a little screen icon with a down arrow. If you hover over it, it will say "Install DisasterMap".
 ---
 
 * **Disaster Map**: Engineered and documented a fully functional web application in **[React]** over a one-month sprint, maintaining a detailed daily changelog.
