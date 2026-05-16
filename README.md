@@ -6,9 +6,14 @@
 _April 2026_
 
 ### Live demo: [Disaster Map](https://disaster-map-nasa-eonet.vercel.app/)
+---
+![Article cover](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxy3m8uhpsnoofx7rco8l.png)
+
+### Dev.to article: [How Do You Turn Raw NASA Satellite Streams into a High-Performance Geospatial Interface?](https://dev.to/suryansh_swarn/how-do-you-turn-raw-nasa-satellite-streams-into-a-high-performance-geospatial-interface-3nlg)
 
 > This project is developed throughout April 2026 to achieve practical fluency, increase my learning and getting comfortable with the framework and language also i am writing every update i have done with dates in this webapp.
 
+---
 ### Tech stack 
 _`React` `Vite` `Twailwindcss` `EONET API` `JS` `Leaflet`_
 
