@@ -1,72 +1,103 @@
-# DISASTER MAP
-*A NASA EONET v3 Interactive Mapping Console driven by a pure aerospace styling matrix.*
+# Disaster Map
 
+An interactive mapping console utilizing the NASA Earth Observatory Natural Event Tracker (EONET) v3 API. The application is built using a modern React architecture and features a clean, responsive geospatial interface.
 
-**Project:02**
-_April 2026_
-
-### Live demo: [Disaster Map](https://disaster-map-nasa-eonet.vercel.app/)
----
-![Article cover](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxy3m8uhpsnoofx7rco8l.png)
-
-### Dev.to article: [How Do You Turn Raw NASA Satellite Streams into a High-Performance Geospatial Interface?](https://dev.to/suryansh_swarn/how-do-you-turn-raw-nasa-satellite-streams-into-a-high-performance-geospatial-interface-3nlg)
-
-> This project is developed throughout April 2026 to achieve practical fluency, increase my learning and getting comfortable with the framework and language also i am writing every update i have done with dates in this webapp.
+## Project Details
+- **Project Reference:** Project:02
+- **Development Period:** April – May 2026
+- **Deployment & Documentation:**
+  - **Live Demo:** [Disaster Map](https://disaster-map-nasa-eonet.vercel.app/)
+  - **Technical Publication:** [How Do You Turn Raw NASA Satellite Streams into a High-Performance Geospatial Interface?](https://dev.to/suryansh_swarn/how-do-you-turn-raw-nasa-satellite-streams-into-a-high-performance-geospatial-interface-3nlg)
 
 ---
-### Tech stack 
-_`React` `Vite` `Twailwindcss` `EONET API` `JS` `Leaflet`_
+
+![Disaster Map Cover](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fxy3m8uhpsnoofx7rco8l.png)
 
 ---
-### Logs:
 
-`April 3 - 17, 2026`
-* **Focus:** Initial setup
-* **Updates:**
-    * Architecture - React + vite.
-    * Tailwind CSS, mapping system using leaflet.
-    * Setup EONET V3 to fetch details.
+## Overview
 
-`April 18, 2026`
-* **Focus:** Initial setup 
-* **Updates:**
-    * UI redo - redesign side bar to remove scrolling resistance and shrink the size of sidebar for better viewing.
+This project was built to explore geospatial data integration, responsive dashboard design, and performance optimizations when rendering high-density datasets. The application pulls live feeds from NASA's Earth Observatory Natural Event Tracker to map active environmental events globally.
 
-`April 19, 2026`
-* **Focus:** Map customization
-* **Updates:**
-    * Map pins - upgrade leaflet pins to custom map icons (using emoji according to the context) for better view and distinguish between different disasters.
-
-`April 20, 2026`
-* **Focus:** Map customization
-* **Updates:**
-    * Zero state feedback - Introduced alert layout to show a message "NO TARGET AQUIRED" when there are no disasters in the selected coordinates on the map. 
-    * Inserted conditional DOM logic if the API feeds a empty array.
-
-`April 21, 2026`
-* **Focus:** Sidebar tweaks
-* **Updates:**
-    * Sidebar optimized for smaller screens, also added responsive classes like max-w-[100vw] so that when it runs on mobile screens, the sidebar handles widths properly relative to the viewport.
-    * Zero state feedback alert repositioned to top-right corner for better visibility.
-    * Added creator button.
-
-`April 23, 2026`
-* **Focus:** map optimizations
-* **Updates:** 
-    * Installs react-leaflet-cluster - Now leaflet doesn't lag rendering thousands of pins, seamlessly condense grouped natural disaster into singular numbering pins.
-    * Visual - starts on indian subcontinent then user can navigate other places in the map.
-
-`May 10, 2026`
-* **Focus:** UI, logo and PWA
-* **Updates:** 
-    * designed new logo with IconKitchen
-    * Progressive Web App (PWA):Look at the far right side of the URL address bar. You should now see a little screen icon with a down arrow. If you hover over it, it will say "Install DisasterMap".
 ---
 
-* **Disaster Map**: Engineered and documented a fully functional web application in **[React]** over a one-month sprint, maintaining a detailed daily changelog.
+## Core Features
 
+- **Real-Time Geospatial Mapping**: Integrates the Leaflet mapping engine with React to render real-time global hazard data.
+- **Performance-Driven Marker Clustering**: Uses `react-leaflet-cluster` to group nearby events, preventing browser rendering lag when processing large numbers of concurrent markers.
+- **Context-Specific Iconography**: Displays distinct custom marker icons corresponding to each type of natural disaster.
+- **Responsive Dashboard Layout**: Features a collapsible, mobile-optimized sidebar that fits within the viewport.
+- **Zero-State & Alert Systems**: Employs robust conditional rendering to display contextual alerts when queries yield empty datasets.
+- **Progressive Web App (PWA)**: Configured to support local installation on desktop and mobile browsers.
 
+---
 
+## Technical Stack
 
+- **Framework**: [React 19](https://react.dev/) / [Vite](https://vite.dev/)
+- **Geospatial Mapping**: [Leaflet](https://leafletjs.com/) / [React Leaflet](https://react-leaflet.js.org/) / [React Leaflet Cluster](https://github.com/akursar/react-leaflet-cluster)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Data Source**: [NASA EONET v3 API](https://eonet.gsfc.nasa.gov/docs/v3)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Charts/Metrics**: [Recharts](https://recharts.org/)
 
+---
 
+## Getting Started
+
+### Prerequisites
+Make sure you have Node.js installed on your system.
+
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd Disaster-map-NASA-EONET-april26
+   ```
+2. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Application
+To launch the development server:
+```bash
+npm run dev
+```
+
+To compile the application for production:
+```bash
+npm run build
+```
+
+To preview the production build locally:
+```bash
+npm run preview
+```
+
+---
+
+## Development Changelog
+
+### Phase 1: Project Setup & Core Mapping Integration (April 3 – 17, 2026)
+* Configured the development environment using React, Vite, and Tailwind CSS.
+* Integrated the Leaflet engine for geospatial map rendering.
+* Connected the client to the NASA EONET v3 API and implemented data-fetching routines for global disaster logs.
+
+### Phase 2: Interface Redesign & Custom Pin Implementation (April 18 – 19, 2026)
+* Redesigned the sidebar to improve navigation, remove scrolling issues, and minimize layout footprint to allocate more screen space to the map.
+* Replaced default Leaflet markers with custom category-specific icons to clearly differentiate types of natural events.
+
+### Phase 3: Error Handling & Viewport Optimization (April 20 – 21, 2026)
+* Introduced a top-right alert layout ("No targets acquired") to provide feedback when no active hazards are present in the selected coordinates.
+* Implemented robust exception-handling logic to manage empty API responses safely.
+* Applied responsive CSS classes to the sidebar (`max-w-[100vw]`) to ensure clean rendering on mobile viewports.
+* Added a creator attribute button in the UI.
+
+### Phase 4: Performance Scaling & Default Positioning (April 23, 2026)
+* Integrated `react-leaflet-cluster` to dynamically group markers, improving frame rates and user experience when mapping hundreds of concurrent environmental events.
+* Updated initial coordinate focusing to target the Indian subcontinent upon load, enabling interactive panning elsewhere.
+
+### Phase 5: Branding & PWA Configuration (May 10, 2026)
+* Designed a custom logo utilizing IconKitchen.
+* Integrated Progressive Web App capabilities, enabling users to install the application natively via compatible browsers.
